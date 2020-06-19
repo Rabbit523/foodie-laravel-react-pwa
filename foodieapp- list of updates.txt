@@ -1,0 +1,199 @@
+
+UPDATE LIST FOR FOODIEAPP.CO
+
+------------------------------------------------------------
+
+
+#1: Customer app - link functionality:
+*Enable SEO friendly, customization link to Restaurant profile must be working on mobile as well as desktop devices. Currently it only works on mobile. here is the working sample mobile link: https://foodieapp.co/restaurants/lucys-JdX133tIDOvfLju
+(desktop link redirects to home page (https://foodieapp.co)
+
+//currently system auto generate that link. 
+*admin must be able to modify it, or just assign custom //url name. 
+*It also does not work for desktop- it must be fixed.
+//When linking/ embedding in another website - the styling of the phone format should remain the //same.
+
+
+
+
+
+
+#2: Customer app- desktop home page: 
+When you go to https://www.foodieapp.co/ 
+you have to press "use app" button to start using the app (only on the desktop)
+*Please remove that step. App must be usable right away. 
+
+
+
+
+
+#3: customer app re-flow - first page & address input.
+*remove "setup your location" button (remove that step)
+(( Instead place ajax address box (from 2nd page)))
+*remove tag field
+*move apartment/ flat field to checkout page
+*Remove popular places
+* place social logins
+
+
+
+
+
+#4: Customer app- checkout page: 
+*Replace live map from customer app at checkout step with restaurant logo. 
+//Instead embed restaurant logo Linked to the main logo. See attached image.
+
+*add apartment/ flat field from 1st page here
+
+
+
+
+
+#5:  restaurant dashboard  module:
+fix or add following buttons - see attached images for references.
+*restaurant dashboard: add accept orders for delivery ( currently works only for pickup)
+*restaurant dashboard: add default prep time display (display restaurant prep time) (for both pickup and delivery)
+*restaurant dashboard: Add "+5min" and "-5min"  buttons next to the time display 
+*add "ready" button for both pickup and delivery. (already existing functionality in pickup mode/ add it to delivery mode)
+
+//workflow: restaurant  can add or remove time (with - & + signs or leave default prep time) then click accept, then countdown begins and order goes to "preparing orders" section - some functionality already existent.
+
+//variable time get's passed on to customer app (already existing functionality,  but need to add variable time)
+
+//delivery orders get prep time (default or adjusted by restaurant) + average delivery time added up and passed on to customer app.
+
+//pickup orders get prep time (default or adjusted by restaurant) passed only.
+ 
+
+
+
+
+#6:  admin dashboard  module:
+Add option to charge restaurant a flat fee per order ( in fixed dollar $ amount)
+Flat fee can be applied to all orders/ or delivery orders only (skipping pickup orders)
+
+Re-name existent commission to "card processing fee"
+allow for % percentage and flat charge (example each order is 2% + $0.25)
+
+
+
+
+
+
+#7: restaurants dashboard - settings (editing) page
+
+*remove existing options from restaurant dashboard admin (they exist in admin settings)
+
+*add restaurant tax field (sales tax) use it instead of tax field from main admin tax field
+(Currently exist in admin dashboard as global setting.)
+
+*add delivery company email  (for forwarding/copying orders) two fields (to and cc)
+//only delivery orders get emailed there
+
+*add average delivery time field (see #6) 
+
+*add default prep time (see #6)
+
+* Add  restaurant enabled/ disabled based on schedule
+create Monday-Sunday open - close time schedule 
+and enable - diable restaurant based on hours.
+//enable/ disable button already exist - we need to add schedule functionality to it.
+
+* leave enable/ disable button in editing-settings as is.
+
+*Add "pause taking orders"  button / (or deactivate) for 15 minutes.
+ (temp pause/deactivation - start button) placed next to restaurant dashboard logo on top.
+//Deactivation button currently exist in in restaurant dashboard- but its not timed
+
+
+
+
+
+
+#8: *Make restaurant dashboard module into PWA. 
+//Currently other modules are PWA but not restaurant dashboard.
+
+
+
+
+
+#9: customer app module: 
+*make top header logo linkable to home page
+//currently not linkable
+
+
+
+
+
+#10: customer app module: 
+*Increase the size of item headline along with price and + & - signs.
+
+
+
+
+
+#11:  all modules: 
+*remove the ability to pinch to zoom. Should not be zoom-able.
+
+
+
+
+
+
+#12:  restaurant item management:
+*Add "pause for the day" button next to disable item button (list view)
+//"pause for the day" button disables the item until 4am. Item becomes active next day.
+
+*Add custom (additional) tax inside item management (item details view)
+
+
+
+
+
+#13: Rewards program. 
+*Modify wallet functionality to make it specific to each restaurant
+Each restaurant has a their own wallet account. 
+Each time user checks out (finalized transaction) user collects X amount of dollars.
+each restaurant sets X variable per visit.
+each restaurant sets minimum amount necessary to redeem.
+
+rewards from y restaurant have to be redeemed to y restaurant (wallet is restaurant specific)
+remove admin ability to add wallet money
+add restaurant ability to add wallet money to specific user
+
+
+
+
+
+
+#14: restaurant app module:
+*represent rating in form of stars not numerical as is currently.
+
+
+
+
+
+
+#15:  restaurant dashboard- earnings page:
+*change "earnings" page name to "reports"
+*add today, yesterday, last week, last month buttons to filter by date + custom range calendar
+*copy circle graphs (from app admin page) that breaks down to go/delivery/delivered for that restaurant
+*add total delivery cost (number of orders X delivery fee) based on timeframe filter 
+*add total commission cost  (number of orders X commission fee) based on timeframe filter 
+
+
+
+
+
+
+
+#16: restaurant dashboard- orders page:
+*add today, yesterday, last week, last month buttons to filter by date + custom range calendar
+
+*Add refund functionality - full refund or item refund (inside individual order details page-view)
+//- checkbox next to each line item for refunding individual items. Must account for refundable tax.
+(refund button already existent in main admin, copy that functionality to restaurant dashboard )
+
+Refund MUST go back to the card holder- not wallet but rather via payment gateway
+change "orders" page name to "customers"
+
